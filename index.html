@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prometo amarte siempre💚</title>
+<link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%23bafff5'/%3E%3Cstop offset='60%25' stop-color='%2357ffd1'/%3E%3Cstop offset='100%25' stop-color='%2300b3ff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Cpath d='M50 18 L58 42 L82 50 L58 58 L50 82 L42 58 L18 50 L42 42 Z' fill='white' opacity='0.9'/%3E%3C/svg%3E">
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #020b10 0%, #0b1d26 60%, #020b10 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* TÍTULOS */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #d8f6ff;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+/* VIDEO */
+.video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 22px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow:
+        0 0 30px rgba(0, 255, 200, 0.25),
+        inset 0 0 60px rgba(255,255,255,0.08);
+}
+
+.video-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 60%);
+    pointer-events: none;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BOTÓN */
+button {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ffb6c1, #ff6f91);
+    color: #2b0015;
+    border: none;
+    padding: 15px 34px;
+    font-size: 1.05rem;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 111, 145, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(255, 111, 145, 0.7);
+}
+
+/* PROPUESTA */
+.proposal {
+    display: none;
+    margin-top: 40px;
+    animation: appear 1.6s ease forwards;
+}
+
+.proposal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #ffd1dc;
+    margin-bottom: 12px;
+}
+
+.proposal p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #fff1f5;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #b8dbe6;
+}
+
+/* ANIMACIÓN */
+@keyframes appear {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    h1 { font-size: 2.1rem; }
+    .proposal h2 { font-size: 2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="areaClick">
+
+<h1>Bajo las Auroras Boreales</h1>
+
+<p class="subtitle">
+Tal vez hoy no podamos viajar tan lejos,<br>
+pero hay momentos que no necesitan un lugar,<br>
+solo dos corazones latiendo al mismo ritmo.
+</p>
+
+<div class="video-frame">
+    <!-- VIDEO LOCAL MUDO -->
+    <video muted loop playsinline controls>
+        <source src="videoboda.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+    </video>
+</div>
+
+<button onclick="mostrarPropuesta(event)">Tengo algo que decirte 💗</button>
+
+<div class="proposal" id="proposal">
+    <h2>¿Te quieres casar conmigo? 💍</h2>
+    <p>
+        Prometo tomarte de la mano en cada noche oscura,<br>
+        celebrar contigo cada amanecer,<br>
+        y amarte hoy, mañana y bajo todas las auroras<br>
+        que la vida nos regale.
+    </p>
+</div>
+
+<footer>
+    Hecho con amor infinito ✨
+</footer>
+
+</div>
+
+<!-- AUDIO -->
+<audio id="musica" loop>
+    <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let musicaIniciada = false;
+
+document.getElementById("areaClick").addEventListener("click", function () {
+    if (!musicaIniciada) {
+        const musica = document.getElementById("musica");
+        musica.volume = 0.6;
+        musica.play().then(() => {
+            musicaIniciada = true;
+        }).catch(() => {});
+    }
+}, { once: true });
+
+function mostrarPropuesta(e) {
+    e.stopPropagation();
+    document.getElementById("proposal").style.display = "block";
+}
+</script>
+
+</body>
+</html>
